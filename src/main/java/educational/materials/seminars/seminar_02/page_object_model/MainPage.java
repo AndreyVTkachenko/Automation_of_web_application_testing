@@ -1,6 +1,6 @@
 package educational.materials.seminars.seminar_02.page_object_model;
 
-import educational.materials.seminars.seminar_02.page_object_model.elements.GroupTableRow;
+import educational.materials.seminars.seminar_02.elements.GroupTableRow;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

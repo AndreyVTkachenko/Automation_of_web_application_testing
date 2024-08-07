@@ -1,4 +1,4 @@
-package educational.materials.seminars.seminar_02.page_object_model.elements;
+package educational.materials.seminars.seminar_02.elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
