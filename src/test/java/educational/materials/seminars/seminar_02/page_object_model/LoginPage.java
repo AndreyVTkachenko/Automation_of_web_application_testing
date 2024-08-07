@@ -1,4 +1,4 @@
-package educational.materials.lessons.lesson_02;
+package educational.materials.seminars.seminar_02.page_object_model;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,13 +25,22 @@ public class LoginPage {
         this.wait = wait;
     }
 
-    public void login(String username, String password) {}
+    public void login(String username, String password) {
+        typeUsernameInField(username);
+        typePasswordInField(password);
+        clickLoginButton();
+    }
 
-    public void typeUsernameInField(String username) {}
+    public void typeUsernameInField(String username) {
+        wait.until(ExpectedConditions.visibilityOf(usernameField)).sendKeys(username);
+    }
 
-    public void typePasswordInField(String password) {}
+    public void typePasswordInField(String password) {
+        wait.until(ExpectedConditions.visibilityOf(passwordField)).sendKeys(password);
+    }
 
     public void clickLoginButton() {
         wait.until(ExpectedConditions.visibilityOf(loginButton)).click();
     }
+
 }
