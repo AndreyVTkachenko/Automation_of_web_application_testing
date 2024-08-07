@@ -14,8 +14,6 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.List;
-import java.util.stream.IntStream;
 
 public class FirstOption extends AbstractTestClass {
 
@@ -33,7 +31,7 @@ public class FirstOption extends AbstractTestClass {
     }
 
     @Test
-    void loginTest() {
+    public void loginTest() {
 
         driver.get(getBaseUrl());
 

@@ -12,8 +12,6 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class SecondOption extends AbstractTestClass {
 
     private WebDriver driver;
@@ -35,15 +33,18 @@ public class SecondOption extends AbstractTestClass {
         driver.manage().window().maximize();
     }
 
-    @Test
-    public void testStandGeekBrains() {
+    public void loginToAccount() {
         driver.get(getBaseUrl());
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("form#login input[type='text']"))).sendKeys(USERNAME);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("form#login input[type='password']"))).sendKeys(PASSWORD);
         WebElement loginButton = driver.findElement(By.cssSelector("form#login button"));
         loginButton.click();
         wait.until(ExpectedConditions.invisibilityOf(loginButton));
+    }
 
+    @Test
+    public void createGroupTest() {
+        loginToAccount();
         WebElement createGroupButton = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#create-btn")));
         createGroupButton.click();
         WebElement groupNameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='text']")));
