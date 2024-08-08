@@ -15,6 +15,7 @@ public abstract class AbstractTestClass {
     private static String username;
     private static String password;
     private static String base_url;
+    private static String full_name;
 
     @BeforeAll
     static void initTest() throws IOException {
@@ -25,6 +26,7 @@ public abstract class AbstractTestClass {
         username =  prop.getProperty("username");
         password = prop.getProperty("password");
         base_url = prop.getProperty("base_url");
+        full_name = prop.getProperty("full_name");
 
     }
 
@@ -34,6 +36,10 @@ public abstract class AbstractTestClass {
 
     public static String getPassword() {
         return password;
+    }
+
+    public static String getFull_name() {
+        return full_name;
     }
 
     public static String getBaseUrl() {
