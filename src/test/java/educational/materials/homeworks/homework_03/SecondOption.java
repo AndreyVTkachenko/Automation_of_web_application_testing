@@ -80,7 +80,7 @@ public class SecondOption extends AbstractTestClass {
         assertEquals("block", mainPage.getStatusOfStudentByUsername(studentUsername));
         mainPage.clickRestoreFromTrashIconOnStudentByUsername(studentUsername);
         assertEquals("active", mainPage.getStatusOfStudentByUsername(studentUsername));
-        saveScreenshot("studentStatus");
+        saveScreenshot("studentStatus.png");
     }
 
     @Test
